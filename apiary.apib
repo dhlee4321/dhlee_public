@@ -1,0 +1,114 @@
+FORMAT: 1A
+HOST: http://xmdw31.appspot.com
+
+# GCP를 이용한 미니프로젝트
+
+GCP miniproject document using API Blueprint
+
++ 인증 서비스
++ 번역 서비스
++ 날씨 서비스
+
+
+## TOPICS [/topic-list]
+
+pubsub 토픽 리스트
+
+### Get topic lists [GET]
+
+for test
+
++ Response 200
+
+        success
+
+## 데이터전송 [/publisher]
+
+### Publisher [GET]
+
++ Response 200
+
+## Group 인증 서비스
+
+## 인증 [/authorize]
+
+### Authentication [GET]
+
++ Response 200
+    
+        success
+
+## 인증 초기화 [/revoke]
+
+### Revoke [GET]
+
++ Response 200
+
+## 세션 초기화 [/clear]
+
+### Clear [GET]
+
++ Response 200
+
+## Group 번역 서비스
+
+## 번역 입력 [/translation/input]
+
+### Translation input [GET]
+
++ Response 200
+
+        success
+        
++ Response 401
+
+        unauthorized
+        
+## 번역 Request [/translation/request{?input_text, target_lang}]
+        
+### Call translation request [GET]
+
++ Parameters
+    + input_text (string, required)
+    
+        **Input Text** for *translation*
+    
+    + target_lang (enum[string], optional)
+    
+        + Members
+            + 'kr'
+            + 'en'
+            
++ Response 200
+
+        success
+        
++ Response 401
+
+        unauthorized
+
+## Group 날씨 서비스
+
+## 오늘의 날씨 [/weather/today]
+
+### weather today [GET]
+
++ Response 200
+
+        success
+        
+## 이번주 날씨 [/weather/week]
+
+### weather week [GET]
+
++ Response 200
+
+        success
+        
+## 전국 날씨 [/weather/national]
+
+### weather national [GET]
+
++ Response 200
+
+        success
